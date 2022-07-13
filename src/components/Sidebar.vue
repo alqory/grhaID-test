@@ -43,13 +43,13 @@
                 <p>Master of data</p>
             </div>
 
-            <div ref="refNav" class="flex gap-1 flex-col w-max mt-3 translate-x-10  transition duration-75 ease-linear " aria-label="children-route">
-                <router-link class="flex items-center gap-2 text-sm" to="/user-product">
+            <div ref="refNav" class="flex gap-1 flex-col w-max mt-3 translate-x-8  transition duration-75 ease-linear " aria-label="children-route">
+                <router-link class="flex items-center gap-2 text-sm pl-1" to="/user-product">
                     <img :src="user" alt="dsh-logo" width="24">
                     User product
                 </router-link>
 
-                <router-link class="flex items-center gap-2 text-sm" to="/report">
+                <router-link class="flex items-center gap-2 text-sm pl-1" to="/report">
                     <img :src="report" alt="dsh-logo" width="24">
                     Report
                 </router-link>

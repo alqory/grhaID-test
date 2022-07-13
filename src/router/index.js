@@ -3,6 +3,7 @@ import DashboardVue from '../pages/Dashboard.vue'
 import PenjualanVue from '../pages/Penjualan.vue'
 import UserProductVue from '../pages/UserProduct.vue'
 import ReportVue from '../pages/Report.vue'
+import LoginVue from '../pages/Login.vue'
 
 const Routes = [
     {
@@ -24,6 +25,11 @@ const Routes = [
         path : "/report",
         name : "report",
         component : ReportVue
+    },
+    {
+        path : "/login",
+        name : "login",
+        component : LoginVue
     }
 ] 
 

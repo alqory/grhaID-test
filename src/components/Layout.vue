@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <main class="flex h-[800px] " aria-label="main-container">
+    <main class="flex h-[1000px] " aria-label="main-container">
         <section class="w-[20%] h-[100vh] fixed bg-gray-600">
             <SidebarVue />
         </section>
