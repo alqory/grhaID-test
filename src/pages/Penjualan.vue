@@ -61,8 +61,8 @@
         Harga.value = Data.harga
         Keterangan.value = Data.keterangan
     }
+    
     const handleRemove = (id) => {
-        // alert(id)
         dbData.value = [...dbData.value].filter((data) => data.id !== id )
     }
 
@@ -100,7 +100,7 @@
                 <button class="text-white bg-gray-500 w-max py-3 px-8 rounded-sm text-sm hover:bg-gray-600 transition duration-150" type="submit">Simpan</button>
             </form>
             <div arial-label="table-wrapper">
-                    <table class="text-center text-white mt-20">
+                    <table class="text-center text-white my-20">
                         <tr>
                             <th>ID</th>
                             <th>Tanggal</th>

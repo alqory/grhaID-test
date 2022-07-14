@@ -19,7 +19,6 @@
 
     const filterNama = ref("")
 
-
     const submitForm = () => {
 
         if(id.value === "") {
@@ -54,8 +53,6 @@
         ket.value = ""
     }
 
-    
-
     const deleteBarang = (id) => {
         dbDataBarang.value = [...dbDataBarang.value].filter((item) => item.id !== id)
     }
@@ -88,9 +85,6 @@
             formRef.value.classList.add("-translate-y-[800px]")
         }
     })
-
-
-
 
 </script>
 

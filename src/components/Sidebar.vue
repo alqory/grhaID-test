@@ -6,11 +6,18 @@
     import user from '../assets/user.svg'
     import report from '../assets/report.svg'
     import out from '../assets/logout.svg'
+    import logo from '../assets/logo.svg'
 
-    import { ref, onMounted, watch } from 'vue'
+    import { ref, watch } from 'vue'
+    import { useRouter } from 'vue-router'
 
     const refNav = ref(null)
     const isShow = ref(false)
+    const router = useRouter()
+
+    const Logout = () => {
+        router.push("/login")
+    }
 
     watch(isShow, (current, prev)=> {
         if(current === true) {
@@ -25,8 +32,8 @@
 </script>
 
 <template>
-    <div class="text-white p-8">
-        <h1>Logo</h1>
+    <div class="text-white p-2 my-5 ml-9 w-max">
+        <img :src="logo" alt="logo" width="80">
     </div>
     <nav class="flex flex-col gap-5 font-light text-white">
         <router-link class="flex items-center pl-8 gap-2 text-lg"  to="/">
@@ -56,7 +63,7 @@
             </div>
         </div>
     </nav>
-    <button class="text-black bg-white text-sm flex gap-1 items-center p-1 rounded-md absolute bottom-7 left-9">
+    <button @click="Logout" class="text-black bg-white text-sm flex gap-1 items-center p-1 rounded-md absolute bottom-7 left-9">
         <img :src="out" alt="" width="24">
         logout
     </button>

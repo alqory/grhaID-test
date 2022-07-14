@@ -10,7 +10,6 @@
     const endPage = ref(3)
     const search = ref("")
     const refTable = ref(null)
-
     const doc = new jsPDF()
 
     const toPDF = () => {

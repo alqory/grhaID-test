@@ -45,9 +45,11 @@
          },
     }
 
+
     const Product = computed(()=> {
         return dummyProduct
     })
+    const Summary = Product.value.reduce((prev, next) => prev + next.total,0)
 
     onMounted(()=> {
 
@@ -74,7 +76,7 @@
             <div class="flex flex-row items-start gap-10 text-gray-300 mt-20" aria-label="table-sum-container">
                 <div class="bg-gray-700 w-max rounded-md p-5 border-l-4" aria-label="sumary-wrapper">
                     <p class="font-light">Summary</p>
-                    <h1 class="text-2xl font-bold">Rp 23.000.000 ,-</h1>
+                    <h1 class="text-2xl font-bold">Rp {{parseCurrency(Summary)}} ,-</h1>
                 </div>
                 <div arial-label="table-wrapper">
                     <table ref="refTable" class="text-center text-white ">      

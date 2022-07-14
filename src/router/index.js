@@ -1,35 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DashboardVue from '../pages/Dashboard.vue'
-import PenjualanVue from '../pages/Penjualan.vue'
-import UserProductVue from '../pages/UserProduct.vue'
-import ReportVue from '../pages/Report.vue'
-import LoginVue from '../pages/Login.vue'
 
 const Routes = [
     {
         path : "/",
         name : "dashboard",
-        component : DashboardVue
+        component : () => import('../pages/Dashboard.vue')
     },
     {
         path : "/penjualan",
         name : "penjualan",
-        component : PenjualanVue
+        component : () => import('../pages/Penjualan.vue')
     },
     {
         path : "/user-product",
         name : "user-product",
-        component : UserProductVue
+        component : () => import('../pages/UserProduct.vue')
     },
     {
         path : "/report",
         name : "report",
-        component : ReportVue
+        component : () => import('../pages/Report.vue')
     },
     {
         path : "/login",
         name : "login",
-        component : LoginVue
+        component : () => import('../pages/Login.vue')
     }
 ] 
 
